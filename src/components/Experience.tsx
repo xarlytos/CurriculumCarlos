@@ -120,52 +120,63 @@ export const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                 <h3 className={`text-2xl font-semibold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                   AstroCode - Ecosistema de Desarrollo IA
                 </h3>
-                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-4 leading-relaxed`}>
+                <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'} mb-6 leading-relaxed`}>
                   Plataforma integral de desarrollo que combina automatizaciones con IA, gestión de proyectos, 
                   agentes inteligentes, RPA, plantillas de desarrollo rápido, control financiero, 
                   aprendizaje activo, PWAs, commerce headless y backend-as-a-service. Un ecosistema 
                   completo para acelerar el desarrollo de aplicaciones modernas.
                 </p>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroFlow - Automatizaciones IA</span>
+                
+                {/* Módulos con descripciones */}
+                <div className="space-y-4">
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroFlow – Automatizaciones</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Permite crear y gestionar flujos de trabajo automatizados usando IA avanzada para optimizar procesos complejos.</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroProjects - Gestión Proyectos</span>
+                  
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroProjects – Listado de Proyectos</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Área para administrar y supervisar todos los proyectos de IA en un mismo lugar, monitorizando el rendimiento y progreso en tiempo real.</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroMindHub - Agentes IA</span>
+                  
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroMindHub – Agentes y Servidores MCP</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Gestión de agentes inteligentes y servidores de comunicación MCP, para controlar la infraestructura neuronal del ecosistema.</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroBotics - RPA & OCR</span>
+                  
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroBotics – RPA</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Grabador de acciones en escritorio y web que facilita la automatización de tareas repetitivas, con programación low-code y uso de OCR/visión artificial.</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroBlueprint - Plantillas</span>
+                  
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroBlueprint – Plantillas & Boilerplates</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Biblioteca de proyectos "arranca-en-5-min" (e-commerce, SaaS B2B, dashboards) con arquitectura recomendada, tests y pipelines ya montados.</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroLedger - Billing & Costes</span>
+                  
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroLedger – Portal de Costes & Billing</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Portal financiero para monitorizar gastos por proyecto/usuario/recurso, hacer proyecciones de coste y gestionar la facturación multi-tenant con integración a Stripe.</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroLoop - Active Learning</span>
+                  
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroLoop – Plataforma de Feedback & Active Learning</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Recoge feedback de usuarios sobre predicciones y re-entrena modelos enviando muestras ambiguas a revisión humana, cerrando el ciclo de aprendizaje.</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroPWA - Progressive Apps</span>
+                  
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroPWA – PWAs & Mini-Apps</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Herramienta para crear Progressive Web Apps y "micro-apps" (como las de WeChat o TikTok) optimizadas para carga instantánea y uso offline.</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroCommerce - Headless</span>
+                  
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroCommerce – Commerce Headless & Marketplaces</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Generador de tiendas headless (Stripe/Square) y marketplaces P2P con split-payments, pensado para emprendedores D2C o plataformas de nicho.</p>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-purple-400' : 'bg-purple-500'}`}></div>
-                    <span className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>AstroAPI - Backend-as-Service</span>
+                  
+                  <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                    <h4 className={`font-semibold mb-2 ${darkMode ? 'text-purple-300' : 'text-purple-600'}`}>AstroAPI – Backend-as-a-Service API Builder</h4>
+                    <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Creador de APIs REST/GraphQL auto-generadas con autenticación, roles y escalado serverless, ideal para productizar APIs sin desarrollar un backend desde cero.</p>
                   </div>
                 </div>
               </div>

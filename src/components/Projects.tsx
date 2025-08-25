@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Star } from 'lucide-react';
+import { ExternalLink, Star, Github } from 'lucide-react';
 
 interface ProjectsProps {
   darkMode: boolean;
@@ -20,6 +20,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'Recharts', 'MSW'],
     image: 'https://inmo-flow-ai.vercel.app/api/og',
     url: 'https://inmo-flow-ai.vercel.app/',
+    githubUrl: 'https://github.com/xarlytos/InmoFlowAI',
     featured: true
   };
 
@@ -36,7 +37,8 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Visualización de contactos por equipo'
       ],
       technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
-      url: 'https://proyectouniversidades.vercel.app/'
+      url: 'https://proyectouniversidades.vercel.app/',
+      githubUrl: 'https://github.com/xarlytos/proyectouniversidades'
     },
     {
       title: 'Onboarding + KYB (mock)',
@@ -50,7 +52,8 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Accesible (focus/aria) y modo oscuro'
       ],
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'MSW', 'Zod', 'React Router', 'Playwright', 'Vitest'],
-      url: 'https://onboarding-kyb-mock.vercel.app/'
+      url: 'https://onboarding-kyb-mock.vercel.app/',
+      githubUrl: 'https://github.com/xarlytos/Onboarding-KYB-mock-'
     },
     {
       title: 'Pagos B2B con Cotización + Confirmación',
@@ -63,7 +66,8 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Historial con filtros y recibo imprimible (hash copiable)'
       ],
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'MSW', 'Zod', 'TanStack Query', 'TanStack Table', 'Playwright', 'Vitest'],
-      url: 'https://pagos-b2-b-con-cotizaci-n-confirmac.vercel.app/'
+      url: 'https://pagos-b2-b-con-cotizaci-n-confirmac.vercel.app/',
+      githubUrl: 'https://github.com/xarlytos/Pagos-B2B-con-Cotizaci-n-Confirmaci-n'
     },
     {
       title: 'Certificación / Notarización de Evidencias',
@@ -77,7 +81,8 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Tarjeta con QR code y vista optimizada para impresión'
       ],
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'MSW', 'Zod', 'React Router', 'Playwright', 'Vitest'],
-      url: 'https://certificaci-n-notarizaci-n-de-evide.vercel.app/'
+      url: 'https://certificaci-n-notarizaci-n-de-evide.vercel.app/',
+      githubUrl: 'https://github.com/xarlytos/Certificaci-n-Notarizaci-n-de-Evidencias'
     }
   ];
 
@@ -145,15 +150,27 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                   ))}
                 </div>
                 
-                <a 
-                  href={featuredProject.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                >
-                  <ExternalLink size={20} />
-                  <span>Ver Proyecto Destacado</span>
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a 
+                    href={featuredProject.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  >
+                    <ExternalLink size={20} />
+                    <span>Ver Proyecto Destacado</span>
+                  </a>
+                  
+                  <a 
+                    href={featuredProject.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center space-x-3 px-8 py-4 ${darkMode ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'} rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl`}
+                  >
+                    <Github size={20} />
+                    <span>Ver en GitHub</span>
+                  </a>
+                </div>
               </div>
               
               <div className="flex items-center justify-center">
@@ -215,15 +232,29 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
                   ))}
                 </div>
                 
-                <a 
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-500 text-white rounded-full font-medium hover:bg-blue-600 transition-all duration-200 hover:scale-105 hover:shadow-lg"
-                >
-                  <ExternalLink size={16} />
-                  <span>Ver Proyecto</span>
-                </a>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a 
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-500 text-white rounded-full font-medium hover:bg-blue-600 transition-all duration-200 hover:scale-105 hover:shadow-lg"
+                  >
+                    <ExternalLink size={16} />
+                    <span>Ver Proyecto</span>
+                  </a>
+                  
+                  {project.title !== 'Base de Contactos Universitarios' && (
+                    <a 
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center space-x-2 px-6 py-3 ${darkMode ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'} rounded-full font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg`}
+                    >
+                      <Github size={16} />
+                      <span>Ver en GitHub</span>
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
