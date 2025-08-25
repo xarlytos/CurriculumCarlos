@@ -9,7 +9,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
   const featuredProject = {
     title: 'InmoFlow AI',
     subtitle: 'SaaS Inmobiliario con IA',
-    description: 'CRM/ERP completo para inmobiliarias con gestión de propiedades, leads, matching inteligente, valoración automática, agenda integrada y marketing studio.',
+    description: 'Aplicación frontend completa para CRM/ERP inmobiliario con gestión de propiedades, leads, matching inteligente, valoración automática, agenda integrada y marketing studio. Proyecto desarrollado exclusivamente en frontend con simulación de datos y APIs mockeadas.',
     highlights: [
       'Pipeline Kanban con drag & drop',
       'Matching lead-propiedad con IA',
@@ -27,7 +27,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
     {
       title: 'Base de Contactos Universitarios',
       subtitle: 'Gestión de Contactos Académicos',
-      description: 'Aplicación web para la gestión y segmentación de contactos académicos, con administración de equipos comerciales y control de permisos.',
+      description: 'Aplicación frontend para la gestión y segmentación de contactos académicos, con interfaz de administración de equipos comerciales y control de permisos. Proyecto desarrollado exclusivamente en frontend con datos simulados.',
       highlights: [
         'Registro y consulta de contactos completos',
         'Conteo y estadísticas por universidad y curso',
@@ -41,7 +41,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
     {
       title: 'Onboarding + KYB (mock)',
       subtitle: 'Verificación de Empresas',
-      description: 'Flujo end-to-end de alta y verificación de empresas con wizard de 3 pasos, validación legal y simulación de verificación en backend.',
+      description: 'Aplicación frontend con flujo end-to-end de alta y verificación de empresas con wizard de 3 pasos, validación legal y simulación completa de verificación. Proyecto desarrollado exclusivamente en frontend con APIs mockeadas.',
       highlights: [
         'Formularios con React Hook Form + Zod, máscaras y checksum NIF/CIF',
         'Autosave en localStorage, guardas/sales/vuelves al borrador',
@@ -50,12 +50,12 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Accesible (focus/aria) y modo oscuro'
       ],
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'MSW', 'Zod', 'React Router', 'Playwright', 'Vitest'],
-      url: '#'
+      url: 'https://onboarding-kyb-mock.vercel.app/'
     },
     {
       title: 'Pagos B2B con Cotización + Confirmación',
       subtitle: 'Módulo de Pagos Empresariales',
-      description: 'Módulo de pagos con cotización (fees/ETA/ruta), caducidad en 30s y confirmación con timeline hasta confirmado/fallo.',
+      description: 'Aplicación frontend de módulo de pagos con cotización (fees/ETA/ruta), caducidad en 30s y confirmación con timeline hasta confirmado/fallo. Proyecto desarrollado exclusivamente en frontend con simulación completa de APIs.',
       highlights: [
         'Countdown accesible (aria-live); invalidación automática al cambiar importe/red/prioridad',
         'Validación de direcciones EVM/Sui y control de decimales por divisa',
@@ -63,12 +63,12 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Historial con filtros y recibo imprimible (hash copiable)'
       ],
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'MSW', 'Zod', 'TanStack Query', 'TanStack Table', 'Playwright', 'Vitest'],
-      url: '#'
+      url: 'https://pagos-b2-b-con-cotizaci-n-confirmac.vercel.app/'
     },
     {
       title: 'Certificación / Notarización de Evidencias',
       subtitle: 'Sistema de Hash y Verificación',
-      description: 'Aplicación para certificar archivos calculando SHA-256 en cliente, con registro y verificación por ID/hash, tarjeta con QR y vista print-friendly.',
+      description: 'Aplicación frontend para certificar archivos calculando SHA-256 en cliente, con registro y verificación por ID/hash, tarjeta con QR y vista print-friendly. Proyecto desarrollado exclusivamente en frontend con almacenamiento local.',
       highlights: [
         'Hashing por chunks en Web Worker con progreso y cancelación',
         'Detección de duplicados (hash ya registrado) y búsqueda en historial',
@@ -77,7 +77,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Tarjeta con QR code y vista optimizada para impresión'
       ],
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'MSW', 'Zod', 'React Router', 'Playwright', 'Vitest'],
-      url: '#'
+      url: 'https://certificaci-n-notarizaci-n-de-evide.vercel.app/'
     }
   ];
 
