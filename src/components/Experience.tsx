@@ -127,6 +127,18 @@ export const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                   completo para acelerar el desarrollo de aplicaciones modernas.
                 </p>
                 
+                {/* Imagen de AstroCode */}
+                <div className="mb-6">
+                  <div className="w-full rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+                    <img 
+                      src="/astrocode imagen.png"
+                      alt="AstroCode - Ecosistema de Desarrollo IA"
+                      className="w-full h-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                
                 {/* Módulos con descripciones */}
                 <div className="space-y-4">
                   <div className={`p-4 rounded-lg ${darkMode ? 'bg-gray-800/50' : 'bg-white/50'} border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>

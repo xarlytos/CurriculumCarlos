@@ -18,7 +18,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
       'Analítica avanzada con KPIs'
     ],
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'Recharts', 'MSW'],
-    image: 'https://inmo-flow-ai.vercel.app/api/og',
+    image: '/image.png',
     url: 'https://inmo-flow-ai.vercel.app/',
     githubUrl: 'https://github.com/xarlytos/InmoFlowAI',
     featured: true
@@ -37,6 +37,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Visualización de contactos por equipo'
       ],
       technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
+      image: '/universidades foto.png',
       url: 'https://proyectouniversidades.vercel.app/',
       githubUrl: 'https://github.com/xarlytos/proyectouniversidades'
     },
@@ -52,6 +53,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Accesible (focus/aria) y modo oscuro'
       ],
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'MSW', 'Zod', 'React Router', 'Playwright', 'Vitest'],
+      image: '/onboarding foto.png',
       url: 'https://onboarding-kyb-mock.vercel.app/',
       githubUrl: 'https://github.com/xarlytos/Onboarding-KYB-mock-'
     },
@@ -66,6 +68,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Historial con filtros y recibo imprimible (hash copiable)'
       ],
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'MSW', 'Zod', 'TanStack Query', 'TanStack Table', 'Playwright', 'Vitest'],
+      image: '/payment app foto.png',
       url: 'https://pagos-b2-b-con-cotizaci-n-confirmac.vercel.app/',
       githubUrl: 'https://github.com/xarlytos/Pagos-B2B-con-Cotizaci-n-Confirmaci-n'
     },
@@ -81,6 +84,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         'Tarjeta con QR code y vista optimizada para impresión'
       ],
       technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'MSW', 'Zod', 'React Router', 'Playwright', 'Vitest'],
+      image: '/certificacion imagen.png',
       url: 'https://certificaci-n-notarizaci-n-de-evide.vercel.app/',
       githubUrl: 'https://github.com/xarlytos/Certificaci-n-Notarizaci-n-de-Evidencias'
     }
@@ -176,7 +180,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
               <div className="flex items-center justify-center">
                 <div className="w-full rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
                   <img 
-                    src="/image.png"
+                    src={featuredProject.image}
                     alt="InmoFlow AI - Preview del proyecto"
                     className="w-full h-auto object-contain"
                     loading="lazy"
@@ -187,73 +191,89 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
           </div>
         </div>
 
-        {/* Other Projects Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        {/* Other Projects - Now in large format like featured project */}
+        <div className="space-y-20">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className={`group rounded-3xl overflow-hidden ${darkMode ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'} border shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2`}
+              className={`group rounded-3xl overflow-hidden ${darkMode ? 'bg-gradient-to-br from-gray-800 to-gray-900' : 'bg-gradient-to-br from-white to-gray-50'} shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}
             >
-              <div className="p-8">
-                <div className="mb-6">
-                  <h3 className={`text-2xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                    {project.title}
-                  </h3>
-                  <p className={`text-base font-semibold ${darkMode ? 'text-blue-400' : 'text-blue-500'} mb-3`}>
-                    {project.subtitle}
-                  </p>
-                  <p className={`${darkMode ? 'text-gray-400' : 'text-gray-600'} leading-relaxed`}>
-                    {project.description}
-                  </p>
-                </div>
-                
-                <div className="mb-6">
-                  <ul className="space-y-2">
-                    {project.highlights.map((highlight, highlightIndex) => (
-                      <li 
-                        key={highlightIndex}
-                        className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'} flex items-start space-x-2`}
-                      >
-                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0 mt-2"></div>
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span 
-                      key={techIndex}
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${darkMode ? 'bg-gray-700 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a 
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center space-x-2 px-6 py-3 bg-blue-500 text-white rounded-full font-medium hover:bg-blue-600 transition-all duration-200 hover:scale-105 hover:shadow-lg"
-                  >
-                    <ExternalLink size={16} />
-                    <span>Ver Proyecto</span>
-                  </a>
+              <div className="grid lg:grid-cols-2 gap-12 p-12">
+                <div>
+                  <div className="mb-6">
+                    <h3 className={`text-3xl lg:text-4xl font-bold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                      {project.title}
+                    </h3>
+                    <p className={`text-lg font-semibold ${darkMode ? 'text-blue-400' : 'text-blue-500'} mb-4`}>
+                      {project.subtitle}
+                    </p>
+                    <p className={`text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed`}>
+                      {project.description}
+                    </p>
+                  </div>
                   
-                  {project.title !== 'Base de Contactos Universitarios' && (
+                  <div className="mb-8">
+                    <h4 className={`text-lg font-semibold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                      Características principales:
+                    </h4>
+                    <ul className="grid grid-cols-1 gap-3">
+                      {project.highlights.map((highlight, highlightIndex) => (
+                        <li 
+                          key={highlightIndex}
+                          className={`flex items-center space-x-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}
+                        >
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex-shrink-0"></div>
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span 
+                        key={techIndex}
+                        className={`px-4 py-2 rounded-full text-sm font-medium ${darkMode ? 'bg-gray-700 text-gray-300 border border-gray-600' : 'bg-white text-gray-700 border border-gray-200'} shadow-sm`}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href={project.githubUrl}
+                      href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center space-x-2 px-6 py-3 ${darkMode ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'} rounded-full font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg`}
+                      className="inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                     >
-                      <Github size={16} />
-                      <span>Ver en GitHub</span>
+                      <ExternalLink size={20} />
+                      <span>Ver Proyecto</span>
                     </a>
-                  )}
+                    
+                    {project.title !== 'Base de Contactos Universitarios' && (
+                      <a 
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`inline-flex items-center space-x-3 px-8 py-4 ${darkMode ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-900'} rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl`}
+                      >
+                        <Github size={20} />
+                        <span>Ver en GitHub</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-center">
+                  <div className="w-full rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-105">
+                    <img 
+                      src={project.image}
+                      alt={`${project.title} - Preview del proyecto`}
+                      className="w-full h-auto object-contain"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -261,7 +281,7 @@ export const Projects: React.FC<ProjectsProps> = ({ darkMode }) => {
         </div>
 
         {/* Call to Action */}
-        <div className={`mt-16 p-10 rounded-3xl ${darkMode ? 'bg-gradient-to-r from-gray-800 to-gray-900 border-gray-700' : 'bg-gradient-to-r from-white to-gray-50 border-gray-200'} border text-center shadow-xl`}>
+        <div className={`mt-20 p-10 rounded-3xl ${darkMode ? 'bg-gradient-to-r from-gray-800 to-gray-900 border-gray-700' : 'bg-gradient-to-r from-white to-gray-50 border-gray-200'} border text-center shadow-xl`}>
           <h3 className={`text-3xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Más proyectos en desarrollo
           </h3>
